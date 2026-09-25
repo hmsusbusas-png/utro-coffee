@@ -383,19 +383,19 @@ section {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 14px;
 }
 
 .g-item {
   overflow: hidden;
   border-radius: 16px;
-  aspect-ratio: 1 / 1;
+  grid-column: span 5;
+  aspect-ratio: 4 / 2.9;
 }
 
 .g-item.g-wide {
-  grid-column: span 2;
-  aspect-ratio: 2.06 / 1;
+  grid-column: span 7;
 }
 
 .g-item img {
