@@ -507,6 +507,7 @@ section {
 
 .contacts-map iframe {
   display: block;
+  width: 100%;
   border: 0;
 }
 
@@ -592,6 +593,15 @@ section {
   .contacts-grid {
     grid-template-columns: 1fr;
   }
+
+  /* шапка плотнее, чтобы ссылки и телефон влезали на планшетной ширине */
+  .nav-inner {
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -602,6 +612,7 @@ section {
   .nav-phone {
     margin-left: auto;
     font-size: 13.5px;
+    padding: 12px 0;
   }
 
   .hero h1 {
@@ -611,6 +622,11 @@ section {
   .hero-actions .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  /* арочное фото по центру, а не прижато к левому краю */
+  .hero-photo {
+    margin: 0 auto;
   }
 
   section {
@@ -629,6 +645,11 @@ section {
 
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* обычные фото — в одну ячейку, иначе span 5 развозит сетку вширь */
+  .g-item {
+    grid-column: span 1;
   }
 
   .g-item.g-wide {
