@@ -14,7 +14,7 @@
 - Галерея со смещённой сеткой, отзывы, акция-стикер
 - Контакты с часами работы, телефоном и встроенной Яндекс-картой
 - Шрифты Prata и Golos Text с нативной кириллицей, подключены с Google Fonts
-- Весь JavaScript — это scroll reveal, файл весит около килобайта
+- JavaScriptа минимум: бургер-меню и scroll reveal, файл весит около килобайта
 
 ## Как посмотреть
 
@@ -38,7 +38,7 @@ python -m http.server 8000
 utro-coffee/
 ├── index.html        # вся разметка
 ├── css/style.css     # стили
-├── js/main.js        # scroll reveal, ~1 КБ
+├── js/main.js        # бургер-меню и scroll reveal, ~1 КБ
 ├── assets/img/       # фото (Unsplash, свободное использование)
 ├── screenshots/      # desktop.png, mobile.png
 └── favicon.svg
