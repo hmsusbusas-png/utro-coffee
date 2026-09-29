@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Утро — кофейня на Покровке</title>
-  <meta name="description" content="Маленькая кофейня в двух минутах от м. Китай-город. Своя обжарка, свежая выпечка, открываемся в 8:00.">
+  <meta name="description" content="Концепт-сайт кофейни «Утро» на Покровке. Меню, галерея, адрес и часы работы.">
+  <link rel="canonical" href="https://hmsusbusas-png.github.io/utro-coffee/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Утро | Концепт кофейни на Покровке">
+  <meta property="og:description" content="Концепт-сайт кофейни: меню, галерея, адрес и часы работы.">
+  <meta property="og:url" content="https://hmsusbusas-png.github.io/utro-coffee/">
+  <meta property="og:image" content="https://hmsusbusas-png.github.io/utro-coffee/screenshots/desktop.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,27 +22,31 @@
 
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo">Утро</a>
-      <nav class="nav-links">
+      <a href="#top" class="logo">Утро</a>
+      <nav class="nav-links" id="nav-links" aria-label="Основная навигация">
         <a href="#menu">Меню</a>
         <a href="#about">О нас</a>
         <a href="#gallery">Галерея</a>
         <a href="#contacts">Контакты</a>
+        <a href="#booking">Забронировать</a>
       </nav>
-      <a href="tel:+74951203847" class="nav-phone">+7 (495) 120-38-47</a>
+      <span class="nav-phone">+7 (495) 120-38-47 · макет</span>
+      <button class="nav-burger" id="nav-burger" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Открыть меню">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
   <main>
     <!-- hero -->
-    <section class="hero">
+    <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-text">
           <span class="eyebrow">Кофейня на Покровке</span>
-          <h1>Кофе, обжаренный вчера. Круассан&nbsp;— час&nbsp;назад.</h1>
+          <h1>Кофе, обжаренный вчера. Круассан через час уже на витрине.</h1>
           <p class="hero-lead">
             Маленькая кофейня в двух минутах от «Китай-города». Обжариваем
-            зерно сами и открываемся в 8:00 — заходите за капучино по пути
+            зерно сами и открываемся в 8:00. Заходите за капучино по пути
             на работу.
           </p>
           <div class="hero-actions">
@@ -43,6 +54,7 @@
             <a href="#contacts" class="btn btn-line">Как нас найти</a>
           </div>
           <p class="hero-note">Пн–Пт с 8:00 · Сб–Вс с 9:00</p>
+          <p class="concept-note">Концепт для портфолио. Адрес, меню и контакты демонстрационные.</p>
         </div>
 
         <div class="hero-photo">
@@ -61,12 +73,12 @@
           <div class="fact">
             <span class="fact-num">01</span>
             <h3>Своя обжарка</h3>
-            <p>Зерно из Эфиопии и Бразилии. Обжариваем небольшими партиями сами — поэтому кофе всегда пахнет кофе, а не банкой.</p>
+            <p>Зерно из Эфиопии и Бразилии. Обжариваем небольшими партиями сами, поэтому кофе пахнет свежо, а не полкой супермаркета.</p>
           </div>
           <div class="fact">
             <span class="fact-num">02</span>
             <h3>Свежая выпечка</h3>
-            <p>Круассаны и синнабоны привозят к открытию. К вечеру обычно уже ничего нет — это не маркетинг, это факт.</p>
+            <p>Круассаны и синнабоны привозят к открытию. К вечеру обычно уже ничего нет. Это не маркетинг, а обычный день.</p>
           </div>
           <div class="fact">
             <span class="fact-num">03</span>
@@ -108,13 +120,13 @@
               <div class="price-row"><dt>Боул с гранолой</dt><dd>390 ₽</dd></div>
               <div class="price-row"><dt>Сэндвич с чеддером</dt><dd>420 ₽</dd></div>
             </dl>
-            <p class="menu-note">Молоко на выбор: обычное, овсяное, кокосовое — без наценки.</p>
+            <p class="menu-note">Молоко на выбор: обычное, овсяное или кокосовое, без наценки.</p>
           </div>
         </div>
 
         <div class="promo">
           <span class="promo-badge">Акция</span>
-          <p class="promo-text">Шестой кофе — в подарок. Карта гостя у кассы, штампы ставим честно.</p>
+          <p class="promo-text">Шестой кофе в подарок. Карта гостя у кассы, штампы ставим честно.</p>
         </div>
       </div>
     </section>
@@ -140,7 +152,7 @@
         <div class="section-head">
           <span class="section-index">Отзывы</span>
           <h2>Что говорят гости</h2>
-          <span class="rating">Яндекс&nbsp;Карты — <strong>4,8</strong></span>
+          <span class="rating">Рейтинг в макете: <strong>4,8</strong></span>
         </div>
         <div class="review-cols reveal">
           <blockquote class="review">
@@ -179,11 +191,11 @@
               </div>
               <div class="info-row">
                 <dt>Телефон</dt>
-                <dd><a href="tel:+74951203847">+7 (495) 120-38-47</a></dd>
+                <dd>Демонстрационный номер: +7 (495) 120-38-47</dd>
               </div>
               <div class="info-row">
                 <dt>Соцсети</dt>
-                <dd><a href="https://t.me/lev_backend" target="_blank" rel="noopener">Telegram</a> · <a href="#" rel="noopener">ВКонтакте</a></dd>
+                <dd><span>Социальные ссылки в этой версии — макет</span></dd>
               </div>
             </dl>
           </div>

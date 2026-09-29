@@ -5,8 +5,8 @@ typographic price list with dot leaders, real photos. No frameworks, no builders
 
 **Live:** [hmsusbusas-png.github.io/utro-coffee](https://hmsusbusas-png.github.io/utro-coffee/)
 
-> This is a portfolio demo: the coffee shop is fictional, but the structure,
-> copy and prices are what a real client would get.
+> This is a fictional portfolio concept. The structure, copy and prices show
+> how a real client landing page could be shaped.
 
 ## What's inside
 
