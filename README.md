@@ -1,61 +1,55 @@
-# Утро — landing для кофейни
+# Утро — лендинг кофейни
 
-Demo landing page for a small coffee shop: light minimalism, warm cream palette,
-typographic price list with dot leaders, real photos. No frameworks, no builders.
-
-**Live:** [hmsusbusas-png.github.io/utro-coffee](https://hmsusbusas-png.github.io/utro-coffee/)
-
-> This is a fictional portfolio concept. The structure, copy and prices show
-> how a real client landing page could be shaped.
-
-## What's inside
-
-- Split hero with an arched photo — the signature detail
-- Three facts block instead of generic "why choose us"
-- Menu as a typographic price list (dot leaders, two columns) — not cards
-- Staggered photo gallery, reviews, promo sticker
-- Contacts with hours, phone and an embedded Yandex Map
-- Fonts: [Prata](https://fonts.google.com/specimen/Prata) + [Golos Text](https://fonts.google.com/specimen/Golos+Text) (native Cyrillic)
-
-## Run
-
-No build step:
-
-```bash
-python -m http.server 8000
-# → http://localhost:8000
-```
-
-## Structure
-
-```
-├── index.html
-├── css/style.css
-├── js/main.js          # small: scroll reveal only
-├── assets/img/         # photos (unsplash, free to use)
-└── favicon.svg
-```
-
-## Contact
-
-Telegram: [@lev_backend](https://t.me/lev_backend)
-
----
-
-## RU
-
-Демо-лендинг для маленькой кофейни: светлый минимализм, тёплая кремовая
-палитра, типографский прайс-лист с точечными лидерами, живые фото.
+Лендинг маленькой кофейни в светлых тонах: тёплая кремовая палитра, типографский прайс-лист с точками-лидерами. Кофейня вымышленная, это концепт для портфолио — но структура, тексты и цены такие, какие получил бы реальный заказчик.
 
 **Живой сайт:** [hmsusbusas-png.github.io/utro-coffee](https://hmsusbusas-png.github.io/utro-coffee/)
 
-> Это демо для портфолио: кофейня вымышленная, но структура, тексты и цены —
-> такие, какие получил бы реальный заказчик.
+![Утро, десктопная версия](screenshots/desktop.png)
 
-Внутри: сплит-hero с арочным фото, блок «три причины» вместо шаблонных
-преимуществ, меню как типографский прайс (не карточки), галерея со смещённой
-сеткой, отзывы, акция-стикер, контакты с Яндекс-картой.
+## Что внутри
 
-Сборка не нужна — открой `index.html` или подними любой статический сервер.
+- Сплит-hero с арочным фото — фирменная деталь макета
+- Блок «три факта» вместо шаблонных «почему выбирают нас»
+- Меню как типографский прайс-лист: две колонки, точки-лидеры между названием и ценой, без карточек
+- Галерея со смещённой сеткой, отзывы, акция-стикер
+- Контакты с часами работы, телефоном и встроенной Яндекс-картой
+- Шрифты Prata и Golos Text с нативной кириллицей, подключены с Google Fonts
+- Весь JavaScript — это scroll reveal, файл весит около килобайта
 
-Связь: Telegram [@lev_backend](https://t.me/lev_backend)
+## Как посмотреть
+
+Сборки нет. Достаточно открыть `index.html` в браузере. Если хочется через сервер:
+
+```powershell
+# PowerShell, из папки проекта
+python -m http.server 8000
+# дальше открыть http://localhost:8000
+```
+
+## Честно об ограничениях
+
+- Кофейня, адрес и телефон вымышленные, контакты демонстрационные
+- Фотографии — стоковые с Unsplash (свободное использование), лежат локально в `assets/img/`
+- Яндекс-карта — обычный встраиваемый виджет, своей формы на сайте нет
+
+## Структура
+
+```
+utro-coffee/
+├── index.html        # вся разметка
+├── css/style.css     # стили
+├── js/main.js        # scroll reveal, ~1 КБ
+├── assets/img/       # фото (Unsplash, свободное использование)
+├── screenshots/      # desktop.png, mobile.png
+└── favicon.svg
+```
+
+## Стек
+
+HTML, CSS и немного ванильного JavaScript. Без фреймворков, без сборки.
+
+---
+
+## EN
+
+Landing page for a fictional coffee shop — a portfolio concept. Light minimalism, warm cream palette, a typographic price list with dot leaders. Vanilla HTML/CSS/JS, no build step: open `index.html` or run `python -m http.server 8000`. Live: https://hmsusbusas-png.github.io/utro-coffee/
