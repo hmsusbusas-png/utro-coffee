@@ -1,5 +1,3 @@
-/* Утро — кофейня на Покровке. Руками, без конструкторов. */
-
 *,
 *::before,
 *::after {
@@ -77,8 +75,6 @@ img {
 .accent {
   color: var(--accent);
 }
-
-/* ─── навигация ─── */
 
 .nav {
   position: sticky;
@@ -158,10 +154,11 @@ img {
   white-space: nowrap;
 }
 
-/* ─── hero ─── */
-
 .hero {
   padding: 74px 0 96px;
+  background:
+    radial-gradient(52% 68% at 76% 22%, rgba(247, 237, 224, .95) 0%, rgba(247, 237, 224, 0) 72%),
+    linear-gradient(180deg, #F7EDE0 0%, var(--bg) 80%);
 }
 
 .hero-grid {
@@ -245,7 +242,6 @@ img {
   color: var(--muted);
 }
 
-/* арочное фото — фирменный приём */
 .hero-photo img {
   width: 100%;
   aspect-ratio: 4 / 4.7;
@@ -253,8 +249,6 @@ img {
   border-radius: 999px 999px 22px 22px;
   box-shadow: 0 24px 60px rgba(62, 42, 30, .16);
 }
-
-/* ─── секции: общее ─── */
 
 section {
   padding: 92px 0;
@@ -280,8 +274,6 @@ section {
   font-size: clamp(1.7rem, 3.2vw, 2.3rem);
 }
 
-/* ─── о нас: три факта ─── */
-
 .facts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -293,12 +285,13 @@ section {
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: 30px 28px;
-  transition: transform .25s cubic-bezier(.4, 0, .2, 1), box-shadow .25s ease;
+  transition: transform .25s cubic-bezier(.4, 0, .2, 1), box-shadow .25s ease, border-color .25s ease;
 }
 
 .fact:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(62, 42, 30, .08);
+  border-color: #DCC9AF;
+  box-shadow: 0 16px 40px rgba(62, 42, 30, .1);
 }
 
 .fact-num {
@@ -318,8 +311,6 @@ section {
   font-size: 15px;
   color: var(--muted);
 }
-
-/* ─── меню: типографский прайс ─── */
 
 .menu {
   background: var(--sand);
@@ -348,15 +339,27 @@ section {
   align-items: baseline;
   padding: 11px 0;
   position: relative;
+  border-radius: 10px;
+  transition: background-color .25s ease, padding .3s cubic-bezier(.4, 0, .2, 1);
 }
 
-/* точечный лидер между названием и ценой */
+.price-row:hover {
+  background-color: #F9F4EA;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 .price-row dt {
   background: var(--sand);
   padding-right: 8px;
   z-index: 1;
   font-size: 16.5px;
-  transition: color .2s ease;
+  transition: color .2s ease, background-color .25s ease;
+}
+
+.price-row:hover dt,
+.price-row:hover dd {
+  background-color: #F9F4EA;
 }
 
 .price-row:hover dt {
@@ -371,6 +374,7 @@ section {
   font-weight: 500;
   color: var(--espresso);
   white-space: nowrap;
+  transition: background-color .25s ease;
 }
 
 .price-row::after {
@@ -380,6 +384,12 @@ section {
   right: 0;
   bottom: 14px;
   border-bottom: 1px dotted #C4B29A;
+  transition: left .3s cubic-bezier(.4, 0, .2, 1), border-color .25s ease;
+}
+
+.price-row:hover::after {
+  left: 12px;
+  border-bottom-color: #AC9377;
 }
 
 .menu-note {
@@ -388,8 +398,6 @@ section {
   color: var(--muted);
   font-style: italic;
 }
-
-/* ─── акция ─── */
 
 .promo {
   margin-top: 56px;
@@ -418,8 +426,6 @@ section {
   max-width: 46ch;
 }
 
-/* ─── галерея ─── */
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -447,8 +453,6 @@ section {
 .g-item:hover img {
   transform: scale(1.045);
 }
-
-/* ─── отзывы ─── */
 
 .rating {
   margin-left: auto;
@@ -489,8 +493,6 @@ section {
   color: var(--muted);
   margin-top: auto;
 }
-
-/* ─── контакты ─── */
 
 .contacts-grid {
   display: grid;
@@ -550,8 +552,6 @@ section {
   border: 0;
 }
 
-/* ─── футер ─── */
-
 .footer {
   border-top: 1px solid var(--line);
   padding: 26px 0;
@@ -576,8 +576,6 @@ section {
   color: var(--muted);
 }
 
-/* ─── появление при скролле ─── */
-
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -600,8 +598,6 @@ section {
     scroll-behavior: auto;
   }
 }
-
-/* ─── адаптив ─── */
 
 @media (max-width: 960px) {
   .hero {
@@ -633,7 +629,6 @@ section {
     grid-template-columns: 1fr;
   }
 
-  /* шапка плотнее, чтобы ссылки влезали на планшетной ширине */
   .nav-inner {
     gap: 20px;
   }
@@ -642,7 +637,6 @@ section {
     gap: 18px;
   }
 
-  /* телефон убираем на планшете: пять ссылок + телефон в одну строку не помещаются */
   .nav-phone {
     display: none;
   }
@@ -697,7 +691,6 @@ section {
     justify-content: center;
   }
 
-  /* арочное фото по центру, а не прижато к левому краю */
   .hero-photo {
     margin: 0 auto;
   }
@@ -720,7 +713,6 @@ section {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* обычные фото — в одну ячейку, иначе span 5 развозит сетку вширь */
   .g-item {
     grid-column: span 1;
   }

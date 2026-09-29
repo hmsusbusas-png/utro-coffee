@@ -1,6 +1,6 @@
-# Утро — лендинг кофейни
+# Утро: лендинг кофейни
 
-Лендинг маленькой кофейни в светлых тонах: тёплая кремовая палитра, типографский прайс-лист с точками-лидерами. Кофейня вымышленная, это концепт для портфолио — но структура, тексты и цены такие, какие получил бы реальный заказчик.
+Лендинг маленькой кофейни в светлых тонах: тёплая кремовая палитра, типографский прайс-лист с точками-лидерами. Кофейня вымышленная, это концепт для портфолио, но структура, тексты и цены такие, какие получил бы реальный заказчик.
 
 **Живой сайт:** [hmsusbusas-png.github.io/utro-coffee](https://hmsusbusas-png.github.io/utro-coffee/)
 
@@ -8,7 +8,7 @@
 
 ## Что внутри
 
-- Сплит-hero с арочным фото — фирменная деталь макета
+- Сплит-hero с арочным фото, фирменная деталь макета
 - Блок «три факта» вместо шаблонных «почему выбирают нас»
 - Меню как типографский прайс-лист: две колонки, точки-лидеры между названием и ценой, без карточек
 - Галерея со смещённой сеткой, отзывы, акция-стикер
@@ -29,8 +29,8 @@ python -m http.server 8000
 ## Честно об ограничениях
 
 - Кофейня, адрес и телефон вымышленные, контакты демонстрационные
-- Фотографии — стоковые с Unsplash (свободное использование), лежат локально в `assets/img/`
-- Яндекс-карта — обычный встраиваемый виджет, своей формы на сайте нет
+- Фотографии стоковые, с Unsplash (свободное использование), лежат локально в `assets/img/`
+- Яндекс-карта: обычный встраиваемый виджет, своей формы на сайте нет
 
 ## Структура
 
@@ -52,4 +52,4 @@ HTML, CSS и немного ванильного JavaScript. Без фреймв
 
 ## EN
 
-Landing page for a fictional coffee shop — a portfolio concept. Light minimalism, warm cream palette, a typographic price list with dot leaders. Vanilla HTML/CSS/JS, no build step: open `index.html` or run `python -m http.server 8000`. Live: https://hmsusbusas-png.github.io/utro-coffee/
+Landing page for a fictional coffee shop, a portfolio concept. Light minimalism, warm cream palette, a typographic price list with dot leaders. Vanilla HTML/CSS/JS, no build step: open `index.html` or run `python -m http.server 8000`. Live: https://hmsusbusas-png.github.io/utro-coffee/

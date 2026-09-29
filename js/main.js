@@ -1,4 +1,3 @@
-// Утро: появление блоков и небольшая мобильная навигация.
 const nav = document.querySelector('.nav');
 const burger = document.getElementById('nav-burger');
 
