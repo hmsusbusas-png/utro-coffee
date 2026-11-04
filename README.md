@@ -1,55 +1,59 @@
-# Утро: лендинг кофейни
+# Утро
 
-Лендинг маленькой кофейни в светлых тонах: тёплая кремовая палитра, типографский прайс-лист с точками-лидерами. Кофейня вымышленная, это концепт для портфолио, но структура, тексты и цены такие, какие получил бы реальный заказчик.
+Landing page concept for a fictional Moscow coffee shop with its own roastery.
 
-**Живой сайт:** [hmsusbusas-png.github.io/utro-coffee](https://hmsusbusas-png.github.io/utro-coffee/)
+Концепт сайта для вымышленной кофейни «Утро». Главное на странице — меню, свёрстанное как печатный лист у кассы, часы работы с живым статусом «открыто/закрыто» по московскому времени и нарисованная схема квартала вместо виджета карт.
 
-![Утро, десктопная версия](screenshots/desktop.png)
+Демо: https://hmsusbusas-png.github.io/utro-coffee/
 
-## Что внутри
+![Первый экран](docs/desktop.jpg)
 
-- Сплит-hero с арочным фото, фирменная деталь макета
-- Блок «три факта» вместо шаблонных «почему выбирают нас»
-- Меню как типографский прайс-лист: две колонки, точки-лидеры между названием и ценой, без карточек
-- Галерея со смещённой сеткой, отзывы, акция-стикер
-- Контакты с часами работы, телефоном и встроенной Яндекс-картой
-- Шрифты Prata и Golos Text с нативной кириллицей, подключены с Google Fonts
-- JavaScriptа минимум: бургер-меню и scroll reveal, файл весит около килобайта
+![Меню](docs/menu.jpg)
 
-## Как посмотреть
+<img src="docs/mobile.jpg" width="300" alt="Первый экран на телефоне">
 
-Сборки нет. Достаточно открыть `index.html` в браузере. Если хочется через сервер:
+## Что на странице
 
-```powershell
-# PowerShell, из папки проекта
+- Меню таблицей: объём под названием, цены через косую черту, примечания мелким шрифтом, как в настоящем меню.
+- Табличка с часами работы. `js/hours.js` по часам Москвы пишет «Открыто до 21:00» или «Откроемся завтра в 9:00» и обновляется раз в минуту.
+- Блок про обжарку: три ложки зерна от светлой до тёмной, у каждой происхождение, вкус и цена пачки.
+- Схема квартала в SVG: остановка, маршрут пешком, арка во двор. Улицы придуманы, реальной точки на карте нет.
+- Страница 404, Open Graph-картинка, favicon.
+
+## Как запустить
+
+```sh
+git clone https://github.com/hmsusbusas-png/utro-coffee
+cd utro-coffee
 python -m http.server 8000
-# дальше открыть http://localhost:8000
 ```
 
-## Честно об ограничениях
+Откройте http://localhost:8000.
 
-- Кофейня, адрес и телефон вымышленные, контакты демонстрационные
-- Фотографии стоковые, с Unsplash (свободное использование), лежат локально в `assets/img/`
-- Яндекс-карта: обычный встраиваемый виджет, своей формы на сайте нет
+## Как устроено
 
-## Структура
+`index.html`, `css/style.css`, `css/fonts.css` и `js/hours.js`. Шрифты: Literata для заголовков и меню, Onest для текста, оба локально в `fonts/` (латиница и кириллица). Фотографии в `img/` в AVIF и WebP трёх ширин.
 
-```
-utro-coffee/
-├── index.html        # вся разметка
-├── css/style.css     # стили
-├── js/main.js        # бургер-меню и scroll reveal, ~1 КБ
-├── assets/img/       # фото (Unsplash, свободное использование)
-├── screenshots/      # desktop.png, mobile.png
-└── favicon.svg
-```
+Lighthouse (мобильный профиль): 100 по всем четырём пунктам. axe и html-validate без ошибок.
 
-## Стек
+## Ограничения
 
-HTML, CSS и немного ванильного JavaScript. Без фреймворков, без сборки.
+- Кофейни нет. Адрес «Солодовый переулок, 7», часы, меню, цены и почта `zerno@example.com` придуманы.
+- Часы работы записаны дважды: в разметке и в `HOURS` в `js/hours.js`. Если меняете одно, поменяйте и другое.
 
----
+## Фотографии
 
-## EN
+С Wikimedia Commons, в странице подписаны в подвале.
 
-Landing page for a fictional coffee shop, a portfolio concept. Light minimalism, warm cream palette, a typographic price list with dot leaders. Vanilla HTML/CSS/JS, no build step: open `index.html` or run `python -m http.server 8000`. Live: https://hmsusbusas-png.github.io/utro-coffee/
+| Кадр | Автор | Лицензия |
+|---|---|---|
+| Капучино сверху | [Na bdiaz](https://commons.wikimedia.org/wiki/File:Cappuccino_for_one.JPG) | CC BY-SA 4.0 |
+| Капучино на столе | [Vee Satayamas](https://commons.wikimedia.org/wiki/File:A_cup_of_cappuccino.jpg) | CC BY 4.0 |
+| Противень с круассанами | [Fumikas Sagisavas](https://commons.wikimedia.org/wiki/File:Freshippo_croissant_bread.jpg) | CC0 |
+| Круассан на тарелке | [Andy Li](https://commons.wikimedia.org/wiki/File:Croissant_-_GAIL%27s_2024-08-18.jpg) | CC0 |
+| Зерно из ростера | [Jkafader](https://commons.wikimedia.org/wiki/File:Beans_Dropping_from_a_Coffee_Roaster.JPG) | CC BY-SA 3.0 |
+| Три степени обжарки | [Michael Allen Smith](https://commons.wikimedia.org/wiki/File:Coffee_Roast_Levels_5_-_The_Home_Roaster_Color_Chart.jpg) (кадры 3, 5 и 7 из серии) | CC BY-SA 2.0 |
+
+## Лицензия
+
+Код — MIT, см. [LICENSE](LICENSE). Фотографии — под лицензиями авторов.
