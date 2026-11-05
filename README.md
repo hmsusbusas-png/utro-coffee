@@ -4,7 +4,7 @@ Landing page concept for a fictional Moscow coffee shop with its own roastery.
 
 Концепт сайта для вымышленной кофейни «Утро». В основе страницы меню, свёрстанное как печатный лист у кассы, часы работы с живым статусом «открыто/закрыто» по московскому времени и нарисованная схема квартала вместо виджета карт.
 
-Демо: https://hmsusbusas-png.github.io/utro-coffee/
+Демо: https://zaxdevv.github.io/utro-coffee/
 
 ![Первый экран](docs/desktop.jpg)
 
@@ -23,7 +23,7 @@ Landing page concept for a fictional Moscow coffee shop with its own roastery.
 ## Как запустить
 
 ```sh
-git clone https://github.com/hmsusbusas-png/utro-coffee
+git clone https://github.com/zaxdevv/utro-coffee
 cd utro-coffee
 python -m http.server 8000
 ```
